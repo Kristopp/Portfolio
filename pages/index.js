@@ -6,6 +6,7 @@ export default function Home() {
       <Head>
         <title>Portfolio</title>
       </Head>
+      <h1>TEST TEXT COLOR</h1>
     </div>
   )
 }
