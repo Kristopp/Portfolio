@@ -1,4 +1,4 @@
-import { container, title, postTitle } from './styles'
+import { container, title } from './styles'
 
 type HeaderProps = { 
     pageTitle?: string
