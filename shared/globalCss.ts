@@ -3,7 +3,6 @@ import { css } from "@emotion/react";
 export const globalStyles = css`
   :root {
     --page-width: 1000px;
-    --page-background: rgb(40, 40, 40);
     --page-text: #fff;
     --background-accent: rgb(34, 34, 34);
     --color-text-invert: rgb(240, 240, 240);
@@ -14,13 +13,15 @@ export const globalStyles = css`
 
   html,
   body {
-    height: 100%;
+    height: 100vh;
     padding: 10;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: var(--page-background);
     color: var(--page-text);
+    background-image: url("/desktoptemplate1920.png");
+    background-size: cover;
+    overflow: hidden;
   }
 
   a {
