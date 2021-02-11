@@ -1,8 +1,10 @@
 
-export const index = () => {
+const Footer = () => {
     return (
         <div>
             
         </div>
     )
 }
+
+export default Footer

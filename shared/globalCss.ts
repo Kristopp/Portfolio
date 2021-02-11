@@ -6,9 +6,8 @@ export const globalStyles = css`
     --page-text: #fff;
     --background-accent: rgb(34, 34, 34);
     --color-text-invert: rgb(240, 240, 240);
-    --color-accent: rgb(4, 64, 100);
+    --color-accent: rgb(200, 200, 200);
     --reading-width: 60ch;
-    --white: #fff;
   }
 
   html,
@@ -17,7 +16,8 @@ export const globalStyles = css`
     padding: 10;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif,
+      Italianno;
     color: var(--page-text);
     background-image: url("/desktoptemplate1920.png");
     background-size: cover;

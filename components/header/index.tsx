@@ -1,14 +1,17 @@
 import { container, title } from './styles'
+import Logo from '@components/Logo'
 
 type HeaderProps = { 
     pageTitle?: string
 }
 
 
-export const index = () => {
+const Header = () => {
     return (
-        <div>
-            
+        <div css={container}>
+            <Logo />
         </div>
     )
 }
+
+export default Header
