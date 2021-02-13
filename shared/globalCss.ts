@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 
 export const globalStyles = css`
   :root {
-    --page-width: 1000px;
+    --page-width: 80%;
     --page-text: #fff;
     --background-accent: rgb(34, 34, 34);
     --color-text-invert: rgb(240, 240, 240);

@@ -1,8 +1,10 @@
 import { ReactNode } from "react";
 import Header from "@components/header";
 import Navigation from "@components/navigation";
+import Welcome from "@components/welcomeComponent"
 import Footer from "@components/footer";
 import SEO, { SEOProps } from "../../components/seo/index";
+import { container } from './style'
 
 type PageProps = {
   /* deconstructed props */
@@ -14,8 +16,9 @@ const GeneralPage = ({ meta, children }: PageProps) => {
   return (
     <div>
      {/*  <SEO {...meta}> */}
-        <main /* css={mainContainer} */>
+        <main css={container}>
           <Header />
+          <Welcome />
           <Navigation />
           {children}
           <Footer />
