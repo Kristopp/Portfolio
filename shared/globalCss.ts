@@ -8,6 +8,7 @@ export const globalStyles = css`
     --color-text-invert: rgb(240, 240, 240);
     --color-accent: rgb(200, 200, 200);
     --reading-width: 60ch;
+    --text-gradiant: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 49%, rgba(0,212,255,1) 100%);
   }
 
   html,

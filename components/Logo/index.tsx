@@ -1,13 +1,12 @@
-import React from 'react'
-import { logoStyle } from './style'
-import Image from 'next/image'
+import React from "react";
+import { logoStyle } from "./style";
 
 const Logo = () => {
-    return (
-        <>
-        <h1 css={logoStyle}>Kp</h1>
-        </>
-    )
-}
+  return (
+    <>
+      <h1 className="text" css={logoStyle}>Kp</h1>
+    </>
+  );
+};
 
-export default Logo
+export default Logo;
