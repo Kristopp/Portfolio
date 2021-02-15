@@ -9,7 +9,7 @@ type HeaderProps = {
 const Header = () => {
     return (
         <div css={container}>
-            <Logo />
+           
         </div>
     )
 }
