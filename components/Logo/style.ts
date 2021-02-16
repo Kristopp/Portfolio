@@ -10,6 +10,7 @@ const logoStyle = css`
   align-items: center;
   text-align: center;
   letter-spacing: -0.185em;
+  margin: 0 auto;
 
 `;
 

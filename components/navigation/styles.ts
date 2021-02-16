@@ -1,18 +1,21 @@
 import { css } from "@emotion/react";
 
 const container = css`
-  margin: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const navStyle = css`
   display: flex;
-  width: 70%;
+  width: 100%;
+  font-family: 'Rajdhani', sans-serif;
   max-width: var(--page-width);
   color: var(--text-color);
   margin: 0 1ch;
   padding: 0.5em 0.5em;
   position: relative;
   justify-content: space-between;
-  font-size: 3rem;
+  font-size: 5rem;
   background-color: var(--page-background);
 
   a:hover,

@@ -17,8 +17,8 @@ export const globalStyles = css`
     padding: 10;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif,
-      Italianno;
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Rajdhani, Italianno, sans-serif,
+      ; 
     color: var(--page-text);
     background-image: url("/desktoptemplate1920.png");
     background-size: cover;
