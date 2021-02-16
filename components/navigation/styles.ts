@@ -7,12 +7,12 @@ const container = css`
 `;
 const navStyle = css`
   display: flex;
-  width: 100%;
+  width: 60%;
   font-family: 'Rajdhani', sans-serif;
   max-width: var(--page-width);
   color: var(--text-color);
   margin: 0 1ch;
-  padding: 0.5em 0.5em;
+  padding: 0.5em 1em;
   position: relative;
   justify-content: space-between;
   font-size: 5rem;

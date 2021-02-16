@@ -9,17 +9,22 @@ const container = css`
   max-width: 70%;
   align-items: center;
   justify-content: center;
-  padding: 0 2ch;
+  padding: 0 4ch;
   min-height: 100vh;
 `;
-const textFormat = css``;
+const fontStyle = css`
+font-size: 5ch;
+font-weight: 200;
+font-family: 'Rajdhani', sans-serif;
+text-align: center;
+`;
 
 const About = () => {
   //meta tags and about text
   return (
     <div css={container}>
-      <section css={textStyle}>
-        <p>
+      <section css={fontStyle}>
+        <p >
           Hello, I am a self-taught developer who is looking for a junior front
           end or full stack position my main tools are react,typescript next.js
           node. I use Figma as my design tool

@@ -22,7 +22,6 @@ const linkStyle = css`
 const textStyle = css`
   margin: 0 auto;
   text-align: center;
-  font-size: 5ch;
   font-weight: 200;
   font-family: 'Rajdhani', sans-serif;
   > p + p {
