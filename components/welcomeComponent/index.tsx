@@ -9,9 +9,9 @@ const WelcomeText = () => {
         <section css={fontStyle}>
           <h1>
             Hello i am Kristo i am looking for junior front end or junior full
-            stack posistion.
+            stack posistion. here is my work contacts and resource i use to
+            learn.
           </h1>
-          <h1>here is my work contacts and resource i use to learn</h1>
         </section>
       </section>
     </div>

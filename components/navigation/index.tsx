@@ -6,10 +6,12 @@ export const Navigation = () => {
   return (
     <div css={container}>
       <nav css={navStyle}>
+        <Link href="/work">
+        <a>work</a>
+        </Link>
         <Link href="/about">
           <a>about</a>
         </Link>
-        <a>work</a>
         <Link href="/contact">
           <a>contact</a>
         </Link>

@@ -1,10 +1,10 @@
 import { FiTwitter as Twitter } from "react-icons/fi";
 import { FiFacebook as Facebook } from "react-icons/fi";
-import { FiGithub as Github } from "react-icons/fi";
 import { FiMail as Email } from "react-icons/fi";
 import { css } from "@emotion/react";
-import { textStyle } from "@shared/reusableStyles"
+import { textStyle } from "@shared/reusableStyles";
 import Footer from "@components/footer";
+import EmailComponent from './../components/emailComponent/index';
 
 const container = css`
   display: flex;
@@ -23,6 +23,11 @@ const iconStyle = css`
     margin: 1ch;
   }
 `;
+const buttonStyle = css`
+  border: none;
+  text-decoration: none;
+  text-align: center;
+`;
 
 export const contact = () => {
   return (
@@ -38,6 +43,7 @@ export const contact = () => {
       <section>
         <h1 css={textStyle}>U can contact me on my social media or email</h1>
       </section>
+      <EmailComponent />
       <ul css={iconStyle}>
         <h1>
           <Twitter style={{ stroke: "url(#gradient)" }} />
@@ -46,10 +52,12 @@ export const contact = () => {
           <Facebook style={{ stroke: "url(#gradient)" }} />
         </h1>
         <h1>
-          <Github style={{ stroke: "url(#gradient)" }} />
-        </h1>
-        <h1>
-          <Email style={{ stroke: "url(#gradient)" }} />
+          <Email
+            style={{ stroke: "url(#gradient)" }}
+            onClick={() => {
+              alert("clicked");
+            }}
+          />
         </h1>
       </ul>
       <Footer />
