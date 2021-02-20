@@ -5,9 +5,10 @@ import { container, footerLogos } from "./styles";
 const Footer = () => {
   return (
     <div css={container}>
+      
       <div css={footerLogos}>
         <CopyLogo />
-        <Logo />
+        <Logo style={{ fill: "url(#gradient)" }} />
       </div>
     </div>
   );
