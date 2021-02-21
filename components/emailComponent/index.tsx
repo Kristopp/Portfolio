@@ -1,15 +1,36 @@
+import emailjs from 'emailjs-com';
+/* import * as dotenv from 'dotenv'; */
+const SERVICE_ID: any = process.env.NEXT_PUBLIC_SERVICE_ID;
+
 type EmailProps = {
   email: string;
-  text: string;
+  message: string;
   openCloseState: boolean;
+  tempLateId: string;
+  subject: string;
 };
+const EmailComponent = ({ email, message, openCloseState }: EmailProps) => {
 
-const EmailComponent = ({ email, text, openCloseState }: EmailProps) => {
+  const sendMail = () => { 
+    emailjs.sendForm(SERVICE_ID, 'YOUR_TEMPLATE_ID', message, 'YOUR_USER_ID')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+}
+
   return (
-    <div>
-      <input type="text" defaultValue="title" />
-      <input type="text" defaultValue="what is ur email" />
-    </div>
+    <form className="contact-form" onSubmit={sendMail}>
+    <input type="hidden" name="contact_number" />
+    <label>Name</label>
+    <input type="text" name="user_name" />
+    <label>Email</label>
+    <input type="email" name="user_email" />
+    <label>Message</label>
+    <textarea name="message" />
+    <input type="submit" value="Send" />
+  </form>
   );
 };
 
