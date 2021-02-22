@@ -4,7 +4,7 @@ import { FiMail as Email } from "react-icons/fi";
 import { css } from "@emotion/react";
 import { textStyle } from "@shared/reusableStyles";
 import Footer from "@components/footer";
-import EmailComponent from './../components/emailComponent/index';
+import EmailComponent from "./../components/emailComponent/index";
 
 const container = css`
   display: flex;
