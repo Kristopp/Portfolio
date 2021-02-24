@@ -9,7 +9,6 @@ import EmailComponent from "./../components/emailComponent/index";
 const container = css`
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -18,9 +17,10 @@ const container = css`
 const iconStyle = css`
   display: flex;
   flex-direction: row;
-  font-size: 3em;
+  font-size: 7ch;
+  margin: 0 auto;
   h1 {
-    margin: 1ch;
+    margin: 0.2ch;
   }
 `;
 const buttonStyle = css`

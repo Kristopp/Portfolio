@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import emailjs, { init } from "emailjs-com";
+import { modalContainer } from "./style";
 init("user_KsSIISErJQQNrpodMRrTv");
 /* import * as dotenv from 'dotenv'; */
 const SERVICE_ID: any = process.env.NEXT_PUBLIC_SERVICE_ID;
 const USER_ID: string | undefined = process.env.NEXT_PUBLIC_USER_ID;
 /* const ACCSES_TOKEN: string | undefined = process.env.ACCSES_TOKEN; */
-const TEMPLATE: any = process.env.TEMPLATE;
+const TEMPLATE: any = process.env.NEXT_PUBLIC_TEMPLATE;
 
-type MailComponent = {
-  emailData: Email;
-  openCloseState: boolean;
-};
 type Email = {
-  name: string;
-  email: string;
+  from_name: string;
+  from_email: string;
   message: string;
 };
-const EmailComponent = ({ emailData }: MailComponent) => {
+type Props = {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
+const EmailComponent = () => {
   const [eMailData, setEmailData] = useState({
     from_name: "",
     from_email: "",
@@ -26,15 +26,19 @@ const EmailComponent = ({ emailData }: MailComponent) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmailData({ ...eMailData, [e.target.name]: e.target.value });
   };
+
   function sendEmail(e: React.ChangeEvent<HTMLInputElement>) {
     e.preventDefault();
     init("user_KsSIISErJQQNrpodMRrTv");
-    emailjs.sendForm(SERVICE_ID, "template_duh5cw7", e.target, USER_ID)
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    console.log(eMailData)
+    emailjs.send(SERVICE_ID, TEMPLATE, eMailData, USER_ID).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   }
 
   return (
@@ -44,8 +48,8 @@ const EmailComponent = ({ emailData }: MailComponent) => {
       <label>Email</label>
       <input type="email" name="from_email" onChange={handleChange} />
       <label>Message</label>
-      <input type="text" name="message" onChange={handleChange} />
-      <button type="submit" value="Send" />
+      <textarea name="message" onChange={handleChange}/>
+      <input type="submit" value="Send" />
     </form>
   );
 };
