@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs, { init } from "emailjs-com";
-import { modalContainer } from "./style";
+import { container, inputContainer, inputStyle, messageInputStyle } from "./style";
 import { useForm } from "react-hook-form";
 
 init("user_KsSIISErJQQNrpodMRrTv");
@@ -15,9 +15,7 @@ type Email = {
   from_email: string;
   message: string;
 };
-type Props = {
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-};
+
 const EmailComponent = () => {
   const [eMailData, setEmailData] = useState({
     from_name: "",
@@ -28,10 +26,9 @@ const EmailComponent = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmailData({ ...eMailData, [e.target.name]: e.target.value });
   };
-  
-  const onSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+  const onSubmit = ({}) => {
     init("user_KsSIISErJQQNrpodMRrTv");
-    console.log(eMailData);
     emailjs.send(SERVICE_ID, TEMPLATE, eMailData, USER_ID).then(
       (result) => {
         console.log(result.text);
@@ -43,16 +40,41 @@ const EmailComponent = () => {
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
-      <label>Name</label>
-      <input type="text" name="from_name" ref={register({ required: true })} onChange={handleChange} />
-      {errors.from_name && <span>This field is required</span>}
-      <label>Email</label>
-      <input type="email" name="from_email" ref={register({ required: true })} onChange={handleChange} />
-      <label>Message</label>
-      <input type="text" name="message" ref={register({ required: true })} onChange={handleChange} />
-      <input type="submit" value="Send" />
-    </form>
+    <div css={container}>
+      <form
+        className="contact-form"
+        onSubmit={handleSubmit(onSubmit)}
+        css={inputContainer}
+      >
+        <label>Name</label>
+        <input
+          type="text"
+          name="from_name"
+          ref={register({ required: true, maxLength: 30 })}
+          onChange={handleChange}
+        />
+        {errors.from_name && <span>This field is required</span>}
+        <label>Email</label>
+        <input
+          type="email"
+          name="from_email"
+          ref={register({ required: true })}
+          onChange={handleChange}
+        />
+        {errors.from_email && <span>Pls enter ur email</span>}
+        <label>Message</label>
+        {errors.message && <span>This field is required</span>}
+
+        <input
+          className="messageBox"
+          type="text"
+          name="message"
+          ref={register({ required: true })}
+          onChange={handleChange}
+        />
+        <input type="submit" value="Send" />
+      </form>
+    </div>
   );
 };
 
