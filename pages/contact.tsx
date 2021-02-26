@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { FiTwitter as Twitter } from "react-icons/fi";
 import { FiFacebook as Facebook } from "react-icons/fi";
 import { FiMail as Email } from "react-icons/fi";
@@ -15,12 +16,14 @@ const container = css`
 `;
 
 const iconStyle = css`
+  width: 20ch;
   display: flex;
   flex-direction: row;
   font-size: 7ch;
-  margin: 0 auto;
+  justify-content: space-between;
   h1 {
-    margin: 0.2ch;
+    margin: 0;
+  opacity: 0.8;
   }
 `;
 const buttonStyle = css`
@@ -30,6 +33,7 @@ const buttonStyle = css`
 `;
 
 export const contact = () => {
+  const [toggleModal, setToggleModal] = useState(true);
   return (
     <div css={container}>
       <svg width="0" height="0">
@@ -43,7 +47,8 @@ export const contact = () => {
       <section>
         <h1 css={textStyle}>U can contact me on my social media or email</h1>
       </section>
-      <EmailComponent />
+      {toggleModal ? <EmailComponent /> : null}
+
       <ul css={iconStyle}>
         <h1>
           <Twitter style={{ stroke: "url(#gradient)" }} />
@@ -55,7 +60,7 @@ export const contact = () => {
           <Email
             style={{ stroke: "url(#gradient)" }}
             onClick={() => {
-              alert("clicked");
+              setToggleModal(!toggleModal);
             }}
           />
         </h1>
