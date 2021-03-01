@@ -7,7 +7,7 @@ export const Navigation = () => {
     <div css={container}>
       <nav css={navStyle}>
         <Link href="/work">
-        <a>work</a>
+        <a>git Repo</a>
         </Link>
         <Link href="/about">
           <a>about</a>

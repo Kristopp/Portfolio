@@ -8,7 +8,7 @@ const container = css`
 const navStyle = css`
   display: flex;
   width: 60%;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   max-width: var(--page-width);
   color: var(--text-color);
   margin: 0 1ch;
@@ -20,7 +20,20 @@ const navStyle = css`
 
   a:hover,
   a:focus {
-    color: var(--color-accent);
+    background: linear-gradient(
+    to left bottom,
+    #b80052,
+    #c80071,
+    #d30e79,
+    #df1981,
+    #ea2289,
+    #f42b78,
+    #fa3868,
+    #fd4858,
+    #fd5949
+  );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;
 

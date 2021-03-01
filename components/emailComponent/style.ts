@@ -3,9 +3,6 @@ import { css } from "@emotion/react";
 const container = css`
   background-image: linear-gradient(
     to left bottom,
-    #790909,
-    #900020,
-    #a50037,
     #b80052,
     #c80071,
     #d30e79,

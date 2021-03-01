@@ -54,7 +54,7 @@ const About = () => {
       <section css={fontStyle}>
         <p>
           Hello, I am a self-taught developer who is looking for a junior front
-          end or full stack position my main tools are
+          end or full stack position tools i use
           <ul css={listSytle}>
             <li>
               React

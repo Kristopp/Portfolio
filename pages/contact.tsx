@@ -33,7 +33,7 @@ const buttonStyle = css`
 `;
 
 export const contact = () => {
-  const [toggleModal, setToggleModal] = useState(true);
+  const [toggleModal, setToggleModal] = useState(false);
   return (
     <div css={container}>
       <svg width="0" height="0">
