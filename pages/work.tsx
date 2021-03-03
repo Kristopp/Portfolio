@@ -1,8 +1,9 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { useState } from "react";
 import GitList from "@components/github-list";
 
 const GIT_USER = process.env.NEXT_PUBLIC_GIT_USER;
-const GIT_HUB_LINK = `https://api.github.com/users/${GIT_USER}/repos`;
+const GIT_HUB_LINK = `https://api.github.com/users/${GIT_USER}/repos?per_page=25&sort=created`;
 
 export type GitData = {
   id: number;
@@ -17,24 +18,27 @@ export type GitListProps = {
 
 function sortData(data: GitData[]) {
   const compareDate = function (date1: GitData, date2: GitData) {
-    return date1 > date2 ? 1 : -1;
+    return date1 > date2 ? -1 : 1;
   };
 
-  const sortedData = data.sort(compareDate)
-  console.log(sortedData)
-  return sortedData
+  const sortData = data.sort(compareDate);
+  console.log(sortData);
+  return sortData;
 }
 export const Work = ({
-  data,
+  sortedData,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const sortedData = sortData(data);
-
-  return <GitList data={sortedData} />;
+  return (
+    <div>
+      <h1>This is my git hub repo list sorted by last update</h1>
+      <GitList data={sortedData} />
+    </div>
+  );
 };
 
 export const getStaticProps = async () => {
   const res = await fetch(GIT_HUB_LINK, {
-    headers: { Accept: "application/vnd.github.v3+json", sort: "updated" },
+    headers: { Accept: "application/vnd.github.v3+json"},
   });
   const data = await res.json();
   if (!data) {
@@ -42,10 +46,11 @@ export const getStaticProps = async () => {
       notfound: true,
     };
   } else {
+    const sortedData: GitData = sortData(data);
+    return {
+      props: { sortedData }, // will be passed to the page component as props
+    };
   }
-  return {
-    props: { data }, // will be passed to the page component as props
-  };
 };
 
 export default Work;
