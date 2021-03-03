@@ -1,5 +1,4 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useState } from "react";
 import GitList from "@components/github-list";
 
 const GIT_USER = process.env.NEXT_PUBLIC_GIT_USER;
@@ -22,12 +21,13 @@ function sortData(data: GitData[]) {
   };
 
   const sortedData = data.sort(compareDate)
+  console.log(sortedData)
   return sortedData
 }
 export const Work = ({
   data,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const sortedData: GitData = sortData(data);
+  const sortedData = sortData(data);
 
   return <GitList data={sortedData} />;
 };
