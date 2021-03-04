@@ -1,35 +1,37 @@
 import Link from "next/link";
-import { GitData , GitListProps } from "../../pages/work"
+import { GitData, GitListProps } from "../../pages/work";
+import { container } from "./style";
+import { gradientTextStyle} from "@shared/reusableStyles"
 
-/* export type GitData = {
-  id: number;
-  html_url: string;
-  createdAt: string;
-  description: string;
-  updated_at: string;
-};
-type GitListProps = {
-  data: GitListProps;
-}; */
 const GitListItems = ({
   id,
+  name,
   html_url,
-  createdAt,
+  created_at,
   description,
+  language,
 }: GitData) => {
   return (
     <li key={id}>
-      <Link href={html_url}>
-        <a>{html_url}</a>
-      </Link>
+      <h2 css={gradientTextStyle}>{name}</h2>
+      <section>
+        <Link href={html_url}>
+          <a>{html_url}</a>
+        </Link>
+        <p>{description}</p>
+        <small>{language}</small>
+        <small> {created_at}</small>
+      </section>
     </li>
   );
 };
 
 const PostGitItems = ({ data }: GitListProps) => {
-  console.log(data)
-
-  return <ul>{data.map(GitListItems)}</ul>;
+  return (
+    <div css={container}>
+      <ul>{data.map(GitListItems)}</ul>
+    </div>
+  );
 };
 
 export default PostGitItems;

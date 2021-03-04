@@ -16,7 +16,20 @@ const linkStyle = css`
 
   a:hover,
   a:focus {
-    color: var(--color-accent);
+    background: linear-gradient(
+    to left bottom,
+    #b80052,
+    #c80071,
+    #d30e79,
+    #df1981,
+    #ea2289,
+    #f42b78,
+    #fa3868,
+    #fd4858,
+    #fd5949
+  );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;
 const textStyle = css`
@@ -28,10 +41,26 @@ const textStyle = css`
     margin-top: 1ch;
   }
 `;
+const gradientTextStyle = css`
+ background: linear-gradient(
+    to left bottom,
+    #b80052,
+    #c80071,
+    #d30e79,
+    #df1981,
+    #ea2289,
+    #f42b78,
+    #fa3868,
+    #fd4858,
+    #fd5949
+  );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+`
 const container = css`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-export { container, linkStyle, textStyle };
+export { container, linkStyle, textStyle, gradientTextStyle };
