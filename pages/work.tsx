@@ -1,6 +1,15 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { useState } from "react";
 import GitList from "@components/github-list";
+import { css } from "@emotion/react"
+
+const container = css`
+
+  h1 { 
+    overflow: auto;
+    padding: 0 0 0 2%;
+  }
+`
 
 const GIT_USER = process.env.NEXT_PUBLIC_GIT_USER;
 const GIT_HUB_LINK = `https://api.github.com/users/${GIT_USER}/repos?per_page=25&sort=created`;
@@ -8,9 +17,10 @@ const GIT_HUB_LINK = `https://api.github.com/users/${GIT_USER}/repos?per_page=25
 export type GitData = {
   id: number;
   html_url: string;
-  createdAt: string;
+  created_at: string;
   description: string;
   updated_at: string;
+  language: string
 };
 export type GitListProps = {
   data: GitData[];
@@ -22,14 +32,13 @@ function sortData(data: GitData[]) {
   };
 
   const sortData = data.sort(compareDate);
-  console.log(sortData);
   return sortData;
 }
 export const Work = ({
   sortedData,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div>
+    <div css={container}>
       <h1>This is my git hub repo list sorted by last update</h1>
       <GitList data={sortedData} />
     </div>
