@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 const container = css`
   height: 100%;
-  overflow: auto;
+  overflow-y: auto;
   position: absolute;
   text-align: left;
   font-weight: 200;
@@ -33,12 +33,21 @@ const container = css`
       -webkit-text-fill-color: transparent;
     }
   }
-   p { 
-     
-   }
-
+  p {
+  }
 `;
 
-const textStyle = css``;
+const cardStyle = css`
+  display: flex;
+  margin: 5px;
+  padding: 0 10px 10px 10px;
+  width: 50ch;
+  background-color: rgba(17, 17, 17, 0.55);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  :hover {
+    transform: translateY(20px);
+  }
+`;
 
-export { container };
+export { container, cardStyle };

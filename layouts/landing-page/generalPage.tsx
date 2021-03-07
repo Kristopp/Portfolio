@@ -6,6 +6,7 @@ import Footer from "@components/footer";
 import SEO, { SEOProps } from "../../components/seo/index";
 import { container } from "./style";
 
+
 type PageProps = {
   /* deconstructed props */
   meta?: SEOProps;
@@ -16,13 +17,13 @@ const GeneralPage = ({ meta, children }: PageProps) => {
   return (
     <div>
       <SEO {...meta} />
-        <main css={container}>
-          <Header />
-          <Welcome />
-          <Navigation />
-          {children}
-          <Footer />
-        </main>
+      <main css={container}>
+        <Header />
+        <Welcome />
+        <Navigation />
+        {children}
+        <Footer />
+      </main>
     </div>
   );
 };

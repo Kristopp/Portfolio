@@ -6,7 +6,6 @@ import { SiTypescript as TypeScriptIcon } from "react-icons/si";
 import { SiNextDotJs as NextJsIcon } from "react-icons/si";
 import { FaNodeJs as NodeIcon } from "react-icons/Fa";
 import { DiMongodb as MongoIcon } from "react-icons/di";
-import { textStyle } from "@shared/reusableStyles";
 
 const container = css`
   display: flex;
@@ -32,8 +31,10 @@ const listSytle = css`
     display: flex;
     flex-direction: column;
     /*  margin: 0.3ch; */
+    animation: animate__fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
   }
-  span { 
+  span {
     font-size: 5ch;
   }
 `;
@@ -50,50 +51,49 @@ const About = () => {
           <stop stopColor="#790909" offset="0.9" />
         </radialGradient>
       </svg>
-      <section></section>
       <section css={fontStyle}>
         <p>
           Hello, I am a self-taught developer who is looking for a junior front
           end or full stack position tools i use
-          <ul css={listSytle}>
-            <li>
-              React
-              <span>
-                <ReactIcon style={{ fill: "url(#gradient)" }} />
-              </span>
-            </li>
-            <li>
-              Typescript
-              <span>
-                <TypeScriptIcon style={{ fill: "url(#gradient)" }} />
-              </span>
-            </li>
-            <li>
-              Next
-              <span>
-                <NextJsIcon style={{ fill: "url(#gradient)" }} />
-              </span>
-            </li>
-            <li>
-              Node
-              <span>
-                <NodeIcon style={{ fill: "url(#gradient)" }} />
-              </span>
-            </li>
-            <li>
-              MongoDb
-              <span>
-                <MongoIcon style={{ fill: "url(#gradient)" }} />
-              </span>
-            </li>
-            <li>
-              Figma
-              <span>
-                <Figma style={{ stroke: "url(#gradient)" }} />
-              </span>
-            </li>
-          </ul>
         </p>
+        <ul css={listSytle}>
+          <li>
+            React
+            <span>
+              <ReactIcon style={{ fill: "url(#gradient)" }} />
+            </span>
+          </li>
+          <li>
+            Typescript
+            <span>
+              <TypeScriptIcon style={{ fill: "url(#gradient)" }} />
+            </span>
+          </li>
+          <li>
+            Next
+            <span>
+              <NextJsIcon style={{ fill: "url(#gradient)" }} />
+            </span>
+          </li>
+          <li>
+            Node
+            <span>
+              <NodeIcon style={{ fill: "url(#gradient)" }} />
+            </span>
+          </li>
+          <li>
+            MongoDb
+            <span>
+              <MongoIcon style={{ fill: "url(#gradient)" }} />
+            </span>
+          </li>
+          <li>
+            Figma
+            <span>
+              <Figma style={{ stroke: "url(#gradient)" }} />
+            </span>
+          </li>
+        </ul>
         <p>
           Im working full-time in another profession, I still need to pay my
           bills :D ,most of my free time learning and working on my projects to

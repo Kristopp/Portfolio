@@ -1,4 +1,6 @@
-import { css } from "@emotion/react";
+import { css, keyframes } from "@emotion/react";
+import { bounce } from "@shared/animations"
+
 
 const container = css`
   display: flex;
@@ -17,6 +19,9 @@ const navStyle = css`
   justify-content: space-between;
   font-size: 5rem;
   background-color: var(--page-background);
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+  cursor: pointer;
 
   a:hover,
   a:focus {
@@ -37,4 +42,4 @@ const navStyle = css`
   }
 `;
 
-export { container, navStyle };
+export { container, navStyle, bounce };

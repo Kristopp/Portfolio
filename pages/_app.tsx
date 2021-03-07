@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap"
           rel="stylesheet"
         />
+        
         <title>Portfolio</title>
       </Head>
       <Global styles={globalStyles} />

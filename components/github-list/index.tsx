@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { GitData, GitListProps } from "../../pages/work";
-import { container } from "./style";
-import { gradientTextStyle} from "@shared/reusableStyles"
+import { container, cardStyle } from "./style";
+import { gradientTextStyle } from "@shared/reusableStyles";
 
 const GitListItems = ({
   id,
@@ -12,17 +12,19 @@ const GitListItems = ({
   language,
 }: GitData) => {
   return (
-    <li key={id}>
-      <h2 css={gradientTextStyle}>{name}</h2>
-      <section>
-        <Link href={html_url}>
-          <a>{html_url}</a>
-        </Link>
-        <p>{description}</p>
-        <small>{language}</small>
-        <small> {created_at}</small>
-      </section>
-    </li>
+    <div key={id} css={cardStyle}>
+      <li>
+        <h2 css={gradientTextStyle}>{name}</h2>
+        <section>
+          <Link href={html_url}>
+            <a>{html_url}</a>
+          </Link>
+          <p>{description}</p>
+          <small>{language}</small>
+          <small> {created_at}</small>
+        </section>
+      </li>
+    </div>
   );
 };
 
