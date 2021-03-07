@@ -8,7 +8,7 @@ const Footer = () => {
       
       <div css={footerLogos}>
         <CopyLogo />
-        <Logo style={{ fill: "url(#gradient)" }} />
+        <Logo />
       </div>
     </div>
   );
