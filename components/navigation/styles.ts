@@ -6,6 +6,7 @@ const container = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
 `;
 const navStyle = css`
   display: flex;
@@ -19,8 +20,6 @@ const navStyle = css`
   justify-content: space-between;
   font-size: 5rem;
   background-color: var(--page-background);
-  animation: bounce; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s;
   cursor: pointer;
 
   a:hover,

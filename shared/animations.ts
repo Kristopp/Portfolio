@@ -1,4 +1,5 @@
 import { css, keyframes } from "@emotion/react";
+import anime from "animejs";
 
 const bounce = keyframes`
   0% {
@@ -19,4 +20,5 @@ const bounce = keyframes`
   }
 `;
 
-export { bounce }
+
+export { bounce };

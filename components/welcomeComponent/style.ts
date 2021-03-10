@@ -10,7 +10,6 @@ const textContainer = css`
 
 const fontStyle = css`
   font-size: 4ch;
-  font-weight: 200;
   font-family: "Rajdhani", sans-serif;
 `;
 export { fontStyle, textContainer };

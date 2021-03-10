@@ -18,7 +18,7 @@ export const globalStyles = css`
 
   html,
   body {
-    height: 100vh;
+    height: auto;
     padding: 10;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,

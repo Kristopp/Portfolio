@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Header from "@components/header";
+
 import Navigation from "@components/navigation";
 import Welcome from "@components/welcomeComponent";
 import Footer from "@components/footer";
@@ -18,7 +18,6 @@ const GeneralPage = ({ meta, children }: PageProps) => {
     <div>
       <SEO {...meta} />
       <main css={container}>
-        <Header />
         <Welcome />
         <Navigation />
         {children}
