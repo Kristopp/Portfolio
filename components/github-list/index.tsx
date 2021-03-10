@@ -1,7 +1,9 @@
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { GitData, GitListProps } from "../../pages/work";
 import { container, cardStyle } from "./style";
 import { gradientTextStyle } from "@shared/reusableStyles";
+import anime from "animejs";
 
 const GitListItems = ({
   id,
@@ -11,8 +13,15 @@ const GitListItems = ({
   description,
   language,
 }: GitData) => {
+  useEffect(() => {
+    anime({
+      targets: ".fromRight",
+      translateX: [2000, 0],
+      delay: anime.stagger(100, {start: 500})
+    });
+  }, []);
   return (
-    <div key={id} css={cardStyle}>
+    <div key={id} css={cardStyle} className="fromRight">
       <li>
         <h2 css={gradientTextStyle}>{name}</h2>
         <section>
@@ -30,7 +39,7 @@ const GitListItems = ({
 
 const PostGitItems = ({ data }: GitListProps) => {
   return (
-    <div css={container}>
+    <div css={container} >
       <ul>{data.map(GitListItems)}</ul>
     </div>
   );

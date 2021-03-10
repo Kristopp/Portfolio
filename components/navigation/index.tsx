@@ -8,16 +8,12 @@ export const Navigation = () => {
   useEffect(() => {
     anime({
       targets: ".fadeInAnimation",
-      // Properties
-      translateY: 100,
-      opacity: [0, 1],
-      
-      // Property Parameters
-      duration: 2000,
-      delay: 200,
-      easing: 'easeInOutQuad',
-      // Animation Parameters
-      
+      keyframes: [
+        {translateX: -50, opacity: 0, duration:0},
+        {translateX: 0, opacity:1, duration:500},
+      ],
+      easing: 'linear',
+      delay: anime.stagger(100, {start: 0}),
     });
   }, []);
 
