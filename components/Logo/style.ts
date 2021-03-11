@@ -6,7 +6,7 @@ const logoStyle = css`
   height: 0;
   font-family: Italianno;
   font-style: normal;
-  font-size: 3em;
+  font-size: 1em;
   align-items: center;
   text-align: center;
   letter-spacing: -0.185em;

@@ -9,11 +9,11 @@ export const Navigation = () => {
     anime({
       targets: ".fadeInAnimation",
       keyframes: [
-        {translateX: -50, opacity: 0, duration:0},
+        {translateX: -100, opacity: 0, duration:0},
         {translateX: 0, opacity:1, duration:500},
       ],
       easing: 'linear',
-      delay: anime.stagger(100, {start: 0}),
+      delay: anime.stagger(100, {start: 200}),
     });
   }, []);
 

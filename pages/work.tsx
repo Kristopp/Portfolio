@@ -4,10 +4,12 @@ import GitList from "@components/github-list";
 import { css } from "@emotion/react";
 import { gradientTextStyle} from "@shared/reusableStyles"
 const container = css`
+box-sizing: border-box;
+
   h1 {
+    padding: 0 3ch;
     overflow: auto;
-    padding: 0 0 0 2%;
-    font-weight: 200;
+    font-weight: bold;
     font-family: "Rajdhani", sans-serif;
     font-size: 3rem;
     margin: 1ch 0 0 0;
@@ -44,8 +46,7 @@ export const Work = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div css={container}>
-      {console.log(data)}
-      <h1 css={gradientTextStyle}> This is my git hub repo list sorted by last update</h1>
+      <h1 css={gradientTextStyle}> MY GITHUB REPOSETORY LIST</h1>
       <GitList data={data} />
     </div>
   );
