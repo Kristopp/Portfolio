@@ -3,6 +3,7 @@ import Link from "next/link";
 import { GitData, GitListProps } from "../../pages/work";
 import { container, cardStyle, row, linkStyle } from "./style";
 import { gradientTextStyle } from "@shared/reusableStyles";
+import moment from 'moment';
 import anime from "animejs";
 
 const toUpper = (stringInput: string): string => {
@@ -10,6 +11,15 @@ const toUpper = (stringInput: string): string => {
     return "no language";
   } else {
     return stringInput.toUpperCase();
+  }
+};
+
+const formatDate = (data: moment.MomentInput) => {
+  if (!data) {
+    return "update data missing";
+  } else {
+    let now = moment(data).format("MM-DD-YYYY");
+    return now
   }
 };
 
@@ -44,7 +54,7 @@ const GitListItems = ({
           </section>
           <section css={row}>
             <p>Last update: </p>
-            <p css={gradientTextStyle}>{created_at}</p>
+            <p css={gradientTextStyle}>{formatDate(created_at)}</p>
           </section>
         </section>
       </li>
