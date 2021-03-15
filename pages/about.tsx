@@ -4,7 +4,7 @@ import { FiFigma as Figma } from "react-icons/fi";
 import { DiReact as ReactIcon } from "react-icons/di";
 import { SiTypescript as TypeScriptIcon } from "react-icons/si";
 import { SiNextDotJs as NextJsIcon } from "react-icons/si";
-import { FaNodeJs as NodeIcon } from "react-icons/Fa";
+import { FaNodeJs as NodeIcon } from "react-icons/fa";
 import { DiMongodb as MongoIcon } from "react-icons/di";
 
 const container = css`
