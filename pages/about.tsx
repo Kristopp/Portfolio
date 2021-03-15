@@ -9,12 +9,13 @@ import { DiMongodb as MongoIcon } from "react-icons/di";
 
 const container = css`
   display: flex;
-  flex-direction: column;
-  max-width: 70%;
-  align-items: center;
+    align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 50%;
   padding: 0 4ch;
-  min-height: 80vh;
+  margin: 0 auto;
+  min-height: 100vh;
 `;
 const fontStyle = css`
   font-size: 5ch;
@@ -95,9 +96,6 @@ const About = () => {
           </li>
         </ul>
         <p>
-          Im working full-time in another profession, I still need to pay my
-          bills :D ,most of my free time learning and working on my projects to
-          get better every day
         </p>
       </section>
       <Footer />

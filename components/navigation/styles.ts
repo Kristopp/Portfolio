@@ -1,41 +1,34 @@
 import { css, keyframes } from "@emotion/react";
-import { bounce } from "@shared/animations"
-
+import { bounce } from "@shared/animations";
 
 const container = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: center;
 `;
 const navStyle = css`
   display: flex;
-  width: 60%;
+  flex-direction: column;
   font-family: "Rajdhani", sans-serif;
-  max-width: var(--page-width);
-  color: var(--text-color);
-  margin: 0 1ch;
-  padding: 0.5em 1em;
-  position: relative;
-  justify-content: space-between;
-  font-size: 5rem;
-  background-color: var(--page-background);
+  width: 100%;
+  margin: 0 auto;
+  font-size: 4rem;
   cursor: pointer;
-
-  a:hover,
-  a:focus {
+  a {
     background: linear-gradient(
-    to left bottom,
-    #b80052,
-    #c80071,
-    #d30e79,
-    #df1981,
-    #ea2289,
-    #f42b78,
-    #fa3868,
-    #fd4858,
-    #fd5949
-  );
+      to left bottom,
+      #b80052,
+      #c80071,
+      #d30e79,
+      #df1981,
+      #ea2289,
+      #f42b78,
+      #fa3868,
+      #fd4858,
+      #fd5949
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

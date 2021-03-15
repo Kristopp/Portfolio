@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { navStyle } from "./styles";
-import { container } from "@shared/reusableStyles";
+import { navStyle, container } from "./styles";
 import anime from "animejs";
 import Link from "next/link";
 
@@ -21,7 +20,7 @@ export const Navigation = () => {
     <div css={container}>
       <nav css={navStyle}>
         <Link href="/work">
-          <a className="fadeInAnimation">git Repo</a>
+          <a className="fadeInAnimation">github</a>
         </Link>
         <Link href="/about">
           <a className="fadeInAnimation">about</a>

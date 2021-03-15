@@ -18,14 +18,13 @@ export const globalStyles = css`
 
   html,
   body {
-    height: auto;
     padding: 10;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Rajdhani,
       Italianno, sans-serif;
     color: var(--page-text);
-    background-image: url("/desktoptemplate1920.png");
+    background-image: url("/desktoptemplate 1.png");
     background-size: cover;
     overflow: hidden;
   }

@@ -51,8 +51,8 @@ const container = css`
 const cardStyle = css`
   display: flex;
   margin: 20px 0 0 0;
-  padding: 0 0 10px 30px;
-  width: 50em;
+  padding: 0 0 0 30px;
+  width: 80%;
   background-color: rgba(17, 17, 17, 0.3);
   background-clip: padding-box; /* !importanté */
   border: solid $border transparent; /* !importanté */

@@ -1,17 +1,17 @@
 import React from "react";
-import { fontStyle, textContainer } from "./style";
-import { container } from "@shared/reusableStyles";
+import { fontStyle, textContainer, container } from "./style";
+/* import { container } from "@shared/reusableStyles"; */
 
 const WelcomeText = () => {
   return (
-    <div  css={container}>
+    <div css={container}>
       <section css={textContainer}>
         <section css={fontStyle}>
-          <h1 >
+          <p >
             Hello i am Kristo i am looking for junior front end or junior full
             stack posistion. here is my work contacts and resource i use to
             learn.
-          </h1>
+          </p>
         </section>
       </section>
     </div>

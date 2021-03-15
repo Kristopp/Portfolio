@@ -3,7 +3,7 @@ import Link from "next/link";
 import { GitData, GitListProps } from "../../pages/work";
 import { container, cardStyle, row, linkStyle } from "./style";
 import { gradientTextStyle } from "@shared/reusableStyles";
-import moment from 'moment';
+import moment from "moment";
 import anime from "animejs";
 
 const toUpper = (stringInput: string): string => {
@@ -19,7 +19,7 @@ const formatDate = (data: moment.MomentInput) => {
     return "update data missing";
   } else {
     let now = moment(data).format("MM-DD-YYYY");
-    return now
+    return now;
   }
 };
 
@@ -29,6 +29,7 @@ const GitListItems = ({
   html_url,
   created_at,
   description,
+  
   language,
 }: GitData) => {
   useEffect(() => {
