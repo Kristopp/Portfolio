@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import { GitData, GitListProps } from "../../pages/work";
 import { container, cardStyle, row, linkStyle } from "./style";
-import { gradientTextStyle } from "@shared/reusableStyles";
+import { containerGridMobile, gradientTextStyle } from "@shared/reusableStyles";
 import moment from "moment";
 import anime from "animejs";
 
@@ -29,13 +29,13 @@ const GitListItems = ({
   html_url,
   created_at,
   description,
-  
+
   language,
 }: GitData) => {
   useEffect(() => {
     anime({
       targets: ".fromRight",
-      translateX: [2000, 0],
+      translateX: [1000, 0],
       delay: anime.stagger(100, { start: 500 }),
     });
   }, []);
@@ -65,8 +65,10 @@ const GitListItems = ({
 
 const PostGitItems = ({ data }: GitListProps) => {
   return (
-    <div css={container}>
-      <ul>{data.map(GitListItems)}</ul>
+    <div css={containerGridMobile}>
+      <div css={container}>
+        <ul>{data.map(GitListItems)}</ul>
+      </div>
     </div>
   );
 };

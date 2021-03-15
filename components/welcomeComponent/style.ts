@@ -18,5 +18,10 @@ const textContainer = css`
 const fontStyle = css`
   font-size: 2.5ch;
   font-family: "Rajdhani", sans-serif;
+  span{ 
+    font-weight: bold;
+    font-size: 2.5ch;
+  }
 `;
+
 export { fontStyle, textContainer, container };

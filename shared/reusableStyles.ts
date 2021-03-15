@@ -17,17 +17,17 @@ const linkStyle = css`
   a:hover,
   a:focus {
     background: linear-gradient(
-    to left bottom,
-    #b80052,
-    #c80071,
-    #d30e79,
-    #df1981,
-    #ea2289,
-    #f42b78,
-    #fa3868,
-    #fd4858,
-    #fd5949
-  );
+      to left bottom,
+      #b80052,
+      #c80071,
+      #d30e79,
+      #df1981,
+      #ea2289,
+      #f42b78,
+      #fa3868,
+      #fd4858,
+      #fd5949
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -36,13 +36,13 @@ const textStyle = css`
   margin: 0 auto;
   text-align: center;
   font-weight: 200;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   > p + p {
     margin-top: 1ch;
   }
 `;
 const gradientTextStyle = css`
- background: linear-gradient(
+  background: linear-gradient(
     to left bottom,
     #b80052,
     #c80071,
@@ -54,13 +54,21 @@ const gradientTextStyle = css`
     #fd4858,
     #fd5949
   );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-`
-const container = css`
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+const containerFlex = css`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-export { container, linkStyle, textStyle, gradientTextStyle };
+const containerGridMobile = css`
+  height: 100vh;
+  max-width: 480px;
+  display: grid;
+  grid-template-columns: auto 80% auto;
+  grid-template-rows: 40% auto auto auto;
+`;
+
+export { containerFlex, linkStyle, textStyle, gradientTextStyle, containerGridMobile };

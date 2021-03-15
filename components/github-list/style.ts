@@ -12,12 +12,9 @@ const floatAnimation = keyframes`
 }
 `;
 const container = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  height: 100vh;
   overflow-y: auto;
-  width: 80%;
+  width: 480px;
   position: absolute;
   font-family: "Rajdhani", sans-serif;
   ::-webkit-scrollbar {
@@ -26,7 +23,7 @@ const container = css`
   }
   ul {
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     a:hover,
     a:focus {
       background: linear-gradient(
@@ -49,13 +46,12 @@ const container = css`
 
 const cardStyle = css`
   display: flex;
-  margin: 20px 0 0 0;
-  padding: 0 0 0 30px;
- /*  width: 80%; */
+  width: 90%;
+  margin-bottom: 1.3ch;
   background-color: rgba(17, 17, 17, 0.3);
   background-clip: padding-box; /* !importanté */
   border: solid $border transparent; /* !importanté */
-  border-radius: 1em;
+  border-radius: 0.5em;
 
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.5);
   &:before {
@@ -74,13 +70,13 @@ const row = css`
   display: flex;
   flex-direction: row;
   .languageStyleAndDate {
-    font-size: 3ch;
+    font-size: 2ch;
   }
 `;
 
 const linkStyle = css`
   cursor: pointer;
-  font-size: 3ch;
+  font-size: 2.1ch;
 `;
 
 export { container, cardStyle, row, linkStyle };

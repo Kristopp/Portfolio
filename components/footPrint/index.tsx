@@ -1,11 +1,11 @@
 import React from "react";
 import { BiCopyright as Copy } from "react-icons/bi";
-import { container } from "@shared/reusableStyles";
+import { containerFlex } from "@shared/reusableStyles";
 import { icon } from "./style";
 
 const footPrint = () => {
   return (
-    <div css={container}>
+    <div css={containerFlex}>
         <svg width="0" height="0">
         <radialGradient id="gradient" r="150%" cx="30%" cy="107%">
           <stop stopColor="#790909" offset="0.05" />

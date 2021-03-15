@@ -2,7 +2,6 @@ import { css } from "@emotion/react";
 
 export const globalStyles = css`
   :root {
-    --page-width: 80%;
     --page-text: #fff;
     --background-accent: rgb(34, 34, 34);
     --color-text-invert: rgb(240, 240, 240);
@@ -25,8 +24,13 @@ export const globalStyles = css`
       Italianno, sans-serif;
     color: var(--page-text);
     background-image: url("/desktoptemplate 1.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
+    background-attachment: fixed;
+    background-position: left center;
   }
 
   a {

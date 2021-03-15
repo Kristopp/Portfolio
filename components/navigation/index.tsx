@@ -8,11 +8,12 @@ export const Navigation = () => {
     anime({
       targets: ".fadeInAnimation",
       keyframes: [
-        {translateX: -100, opacity: 0, duration:0},
-        {translateX: 0, opacity:1, duration:500},
+        {translateX: -1000, opacity: 0, duration:0},
+        {translateX: 100, opacity:1, duration:300},
+        {translateX: 0, opacity:1, duration:200},
       ],
       easing: 'linear',
-      delay: anime.stagger(100, {start: 200}),
+      delay: anime.stagger(200, {start: 200}),
     });
   }, []);
 

@@ -45,7 +45,7 @@ export const Work = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div css={container}>
-      <h1 css={gradientTextStyle}> MY GITHUB REPOSETORY LIST</h1>
+      <h1 css={gradientTextStyle}>GITHUB REPOSETORY</h1>
       <GitList data={data} />
     </div>
   );
