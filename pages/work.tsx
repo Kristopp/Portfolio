@@ -1,5 +1,4 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useState } from "react";
 import GitList from "@components/github-list";
 import { css } from "@emotion/react";
 import { gradientTextStyle} from "@shared/reusableStyles"

@@ -10,14 +10,15 @@ const floatAnimation = keyframes`
             transform: scale(1.01);
   }
 }
-
 `;
 const container = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  width: auto;
   overflow-y: auto;
+  width: 80%;
   position: absolute;
-  text-align: left;
   font-family: "Rajdhani", sans-serif;
   ::-webkit-scrollbar {
     width: 0; /* Remove scrollbar space */
@@ -44,15 +45,13 @@ const container = css`
       -webkit-text-fill-color: transparent;
     }
   }
-  p {
-  }
 `;
 
 const cardStyle = css`
   display: flex;
   margin: 20px 0 0 0;
   padding: 0 0 0 30px;
-  width: 80%;
+ /*  width: 80%; */
   background-color: rgba(17, 17, 17, 0.3);
   background-clip: padding-box; /* !importanté */
   border: solid $border transparent; /* !importanté */
@@ -67,23 +66,21 @@ const cardStyle = css`
   :hover {
     animation: ${floatAnimation} 0.5s forwards;
   }
-  p { 
+  p {
     margin-right: 1ch;
-    
   }
- 
 `;
 const row = css`
   display: flex;
   flex-direction: row;
-  .languageStyleAndDate { 
+  .languageStyleAndDate {
     font-size: 3ch;
   }
 `;
 
 const linkStyle = css`
-cursor: pointer;
-font-size: 3ch;
+  cursor: pointer;
+  font-size: 3ch;
 `;
 
-export { container, cardStyle, row,linkStyle };
+export { container, cardStyle, row, linkStyle };
